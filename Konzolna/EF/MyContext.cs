@@ -8,11 +8,12 @@ namespace Konzolna.EF
 {
     public class MyContext:DbContext
     {
-        DbSet<Kupac> Kupac { get; set; }
-        DbSet<Opstina> Opstina { get; set; }
+        public  DbSet<Kupac> Kupac { get; set; }
+        public DbSet<Opstina> Opstina { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer("Server=.;Database=OpstinaKupac;User=hari;Password=hari;");
         }
     }
 }

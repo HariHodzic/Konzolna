@@ -7,17 +7,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Konzolna.Models
 {
-    class Kupac
+    public class Kupac
     {
         public int Id { get; set; }
         public string Naziv { get; set; }
 
         public string Adresa { get; set; }
-        
 
-        public int OpstinaID { get; set; }
+        //[Column("OpstinaRodjenjaID")]
+        //public int OpstinaID { get; set; }
 
-        [ForeignKey("OpstinaID")]
-        public Opstina Opstina { get; set; }
+        public int OpstinaRodjenjaID { get; set; }
+        [ForeignKey("OpstinaRodjenjaID")]
+        public Opstina OpstinaRodjenja { get; set; }
+
+        public int OpstinaPrebivalistaID { get; set; }
+        [ForeignKey("OpstinaPrebivalistaID")]
+        public Opstina OpstinaPrebivalista { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Konzolna.Models
 {
-    class Opstina
+    public class Opstina
     {
         public int Id { get; set; }
         public string Naziv { get; set; }
